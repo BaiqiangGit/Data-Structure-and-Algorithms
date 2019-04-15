@@ -3,7 +3,7 @@ Data Structure and Algorithm Study Based on Python 3
 
 [Jupyter Notebook](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/baiqiang_ds.ipynb)
 
-[1. Array](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/array.py)
+[1. Array](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/Array.py)
 
 [2. SinglyLinkedList](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/singlyLinkedList.py)
 
