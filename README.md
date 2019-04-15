@@ -7,4 +7,4 @@ Data Structure and Algorithm Study Based on Python 3
 
 [3. DoublyLinkedList](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/doublyLinkedList.py)
 
-[4. Naive Binary Tree](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/naiveTree.py.py)
+[4. Naive Binary Tree](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/naiveTree.py)
