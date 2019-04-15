@@ -1,4 +1,4 @@
-# Data Structure and Algorithm Study
+# Data Structure and Algorithm
 Data Structure and Algorithm Study Based on Python 3
 
 [Jupyter Notebook](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/baiqiang_ds.ipynb)
