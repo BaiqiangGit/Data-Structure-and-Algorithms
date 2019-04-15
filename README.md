@@ -12,4 +12,4 @@ Data Structure and Algorithm Study Based on Python 3
 [4. Naive Binary Tree](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/naiveTree.py)
 
 # Miscellaneous
-[1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/Truth Value Testing.ipynb.py)
+[1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/TruthValueTesting.ipynb.py)
