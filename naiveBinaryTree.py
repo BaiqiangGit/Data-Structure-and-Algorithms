@@ -7,7 +7,7 @@
 class treeNode(object):
     def __init__(self, key, parent = None, leftChild = None, rightChild = None):
         self.key = key
-        self.parent = parent
+        self.parent = parent ## not used
         self.left = leftChild
         self.right = rightChild
         
