@@ -15,5 +15,7 @@ Data Structure and Algorithm Study Based on Python 3
 
 [6. Min Binary Heap](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/minBinaryHeap.py)
 
+[7. Max Binary Heap](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/maxBinaryHeap.py)
+
 # Miscellaneous
 [1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/nb/TruthValueTesting.ipynb)
