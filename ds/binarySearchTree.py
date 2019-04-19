@@ -14,6 +14,58 @@ class bst_node(object):
         self.right= None
         self.parent = None
         
+            
+    ## display(copied, not my implementation) 
+    def display(self):
+        lines, _, _, _ = self._display_aux()
+        for line in lines:
+            print(line)
+
+    def _display_aux(self):
+        """Returns list of strings, width, height, and horizontal coordinate of the root."""
+        # No child.
+        if self.right is None and self.left is None:
+            line = '%s' % self.key
+            width = len(line)
+            height = 1
+            middle = width // 2
+            return [line], width, height, middle
+
+        # Only left child.
+        if self.right is None:
+            lines, n, p, x = self.left._display_aux()
+            s = '%s' % self.key
+            u = len(s)
+            first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s
+            second_line = x * ' ' + '/' + (n - x - 1 + u) * ' '
+            shifted_lines = [line + u * ' ' for line in lines]
+            return [first_line, second_line] + shifted_lines, n + u, p + 2, n + u // 2
+
+        # Only right child.
+        if self.left is None:
+            lines, n, p, x = self.right._display_aux()
+            s = '%s' % self.key
+            u = len(s)
+            first_line = s + x * '_' + (n - x) * ' '
+            second_line = (u + x) * ' ' + '\\' + (n - x - 1) * ' '
+            shifted_lines = [u * ' ' + line for line in lines]
+            return [first_line, second_line] + shifted_lines, n + u, p + 2, u // 2
+
+        # Two children.
+        left, n, p, x = self.left._display_aux()
+        right, m, q, y = self.right._display_aux()
+        s = '%s' % self.key
+        u = len(s)
+        first_line = (x + 1) * ' ' + (n - x - 1) * '_' + s + y * '_' + (m - y) * ' '
+        second_line = x * ' ' + '/' + (n - x - 1 + u + y) * ' ' + '\\' + (m - y - 1) * ' '
+        if p < q:
+            left += [n * ' '] * (q - p)
+        elif q < p:
+            right += [m * ' '] * (p - q)
+        zipped_lines = zip(left, right)
+        lines = [first_line, second_line] + [a + u * ' ' + b for a, b in zipped_lines]
+        return lines, n + m + u, max(p, q) + 2, n + u // 2
+        
 ## tree
 class bst(object):
     ## init
@@ -224,3 +276,18 @@ class bst(object):
             left_ok = self.__is_valid_bst(root.left, min, root.key) if root.left else True
             right_ok = self.__is_valid_bst(root.right,  root.key, max) if root.right else True
             return left_ok and right_ok
+            
+    ## print all root-leaf paths
+    def printRoute(self):
+        if not self.root:
+            print('@empty bst!')
+            return
+        else:
+            self.__printRoute(self.root, [])
+    def __printRoute(self, root, path):
+        if not root.left and not root.right: ## case 1, leaf node
+            print('-'.join([f for f in path + [str(root.key)] ]))
+            return
+        if root.left: self.__printRoute(root.left, path + [str(root.key)])   ## case 2, left child exists
+        if root.right :  self.__printRoute(root.right, path + [str(root.key)])  ## case 3, right child exists     
+            
