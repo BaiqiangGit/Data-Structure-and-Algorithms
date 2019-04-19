@@ -9,7 +9,9 @@ Data Structure and Algorithm Study Based on Python 3
 
 [3. DoublyLinkedList](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/doublyLinkedList.py)
 
-[4. Naive Binary Tree](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/naiveTree.py)
+[4. Naive Binary Tree](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/naiveBinaryTree.py)
+
+[5. Binary Search Tree](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/binarySearchTree.py)
 
 # Miscellaneous
 [1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/TruthValueTesting.ipynb.py)
