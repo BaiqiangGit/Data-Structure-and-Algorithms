@@ -3,13 +3,13 @@
 ## Baiqiang XIA implementation of data structures
 
 ## bst implementation
-## reference: https://github.com/joeyajames/Python/blob/master/Trees/BinarySearchTree.py
+## ref: https://github.com/joeyajames/Python/blob/master/Trees/BinarySearchTree.py
 
 ## node 
 class bst_node(object):
     ## init
-    def __init__(self, val):
-        self.val  = val
+    def __init__(self, key):
+        self.key  = key
         self.left  = None
         self.right= None
         self.parent = None
@@ -21,33 +21,33 @@ class bst(object):
         self.root = None
     
     ## insert
-    def insert(self, val):
+    def insert(self, key):
         if not self.root:
-            print('@insert %d at root!'%val)
-            self.root = bst_node(val)
+            print('@insert %d at root!'%key)
+            self.root = bst_node(key)
             return 1
         else:
-            return self.__insert(self.root, val)
+            return self.__insert(self.root, key)
             
-    def __insert(self, node,val):
-        if val < node.val:
+    def __insert(self, node, key):
+        if key < node.key:
             if node.left:
-                return self.__insert(node.left, val)
+                return self.__insert(node.left, key)
             else:
-                print('@insert %d as left leaf!'%val)
-                node.left = bst_node(val)
+                print('@insert %d as left leaf!'%key)
+                node.left = bst_node(key)
                 node.left.parent = node
                 return 1
-        elif val > node.val:
+        elif key > node.key:
             if node.right:
-                return self.__insert(node.right, val)
+                return self.__insert(node.right, key)
             else:
-                print('@insert %d as right leaf!'%val)
-                node.right = bst_node(val)
+                print('@insert %d as right leaf!'%key)
+                node.right = bst_node(key)
                 node.right.parent = node
                 return 1
         else:
-             print('@cannot insert duplicated value to bst!')
+             print('@cannot insert duplicated keyue to bst!')
              return -1
              
     ## height
@@ -84,19 +84,19 @@ class bst(object):
             return 1
             
     ## find
-    def find(self, val):
+    def find(self, key):
         if not self.root:
             return False
         else:
-            return self.__find(self.root, val)
+            return self.__find(self.root, key)
             
-    def __find(self, entry, val):
-        if entry.val == val:
+    def __find(self, entry, key):
+        if entry.key == key:
             return True
-        elif entry.val > val and entry.left:
-            return self.__find(entry.left, val)
-        elif entry.val < val and entry.right:
-            return self.__find(entry.right, val)
+        elif entry.key > key and entry.left:
+            return self.__find(entry.left, key)
+        elif entry.key < key and entry.right:
+            return self.__find(entry.right, key)
         return False
         
     ## inorder
@@ -107,7 +107,7 @@ class bst(object):
             self.__inorder(self.root)
     def __inorder(self, entry):
         if entry.left: self.__inorder(entry.left)
-        print(entry.val, end = '-')
+        print(entry.key, end = '-')
         if entry.right: self.__inorder(entry.right)
         
     ## preorder
@@ -117,7 +117,7 @@ class bst(object):
         else:
             self.__preorder(self.root)
     def __preorder(self, entry):
-        print(entry.val, end = '-')
+        print(entry.key, end = '-')
         if entry.left: self.__preorder(entry.left)
         if entry.right: self.__preorder(entry.right)
         
@@ -130,7 +130,7 @@ class bst(object):
     def __postorder(self, entry):
         if entry.left: self.__postorder(entry.left)
         if entry.right: self.__postorder(entry.right)
-        print(entry.val, end = '-')
+        print(entry.key, end = '-')
         
     ## bread first traversal
     def breadFirst(self):
@@ -143,66 +143,84 @@ class bst(object):
         while this_layer:
             next_layer = []
             for each in this_layer:
-                print(each.val, end = '-')
+                print(each.key, end = '-')
                 if each.left: next_layer.append(each.left)
                 if each.right: next_layer.append(each.right)
             print()
             this_layer = next_layer
-            
-    ## delete
-    def delete(self, val):
+      
+    ## delete function
+    def delete(self, key):
         if not self.root:
-            print('@cannot delete node in empty tree!')
             return False
         else:
-            return self.__delete(self.root, val)
-            
-    def __delete(self, entry, val):
-        ## case 1: left subtree
-        if entry.val > val: 
-            if entry.left:
-                return self.__delete(entry.left, val)
-            else:
-                print('@cannot find value L!')
+            return self.__delete(self.root, key)        
+    ## private counterpart
+
+    def __delete(self, root, key):
+        ## when a match is found
+        if key == root.key:
+            ## deleted node has 0 child
+            if root.left is None and root.right is None:
+                if root.parent is None:
+                    self.root = None ## set root to None
+                elif root.parent.left is root:
+                    root.parent.left = None ## correct the link to parent
+                elif root.parent.right is root:
+                    root.parent.right = None ## correct the link to parent
+                return True
+            ## deleted node has left child
+            elif root.left is not None and root.right is None:
+                root.key = root.left.key  
+                root.right= root.left.right ## 
+                root.left  = root.left.left   ## be careful of the order of assignment, don't change root.left first
+                if root.left: root.left.parent = root
+                if root.right: root.right.parent = root
+                return True
+            ## deleted node has right child   
+            elif root.right  is not None and root.left is None:
+                root.key = root.right.key
+                root.left  = root.right.left   ## 
+                root.right= root.right.right ## be careful of the order of assignment, don't change root.right first
+                if root.left: root.left.parent = root
+                if root.right: root.right.parent = root
+                return True
+            ## deleted node has 2 children  
+            elif root.right and root.left:
+                ## get min right (inorder successor)
+                min_right = root.right
+                while min_right.left:
+                    min_right = min_right.left
+                ## change the key
+                root.key = min_right.key
+                ## remove the min_right node in the right subtree
+                self.__delete(min_right, min_right.key) ## be careful here, the key to be deleted changes to min_right.key, 
+                                                                              ## this line will direct to the code under 'if key == root.key:' 
+                                                                              ## root should be min_right, not root.right, to reduce overlaped search (though result would be same)
+                return True
+        elif key < root.key:  
+            if root.left:
+                return self.__delete(root.left, key)
+            else: ## end of search
+                print('@delete failed, no match found!')
                 return False
-        ## case 2: right subtree
-        elif entry.val < val:
-            if entry.right:
-                return self.__delete(entry.right, val)
-            else:
-                print('@cannot find value R!')
+        elif key > root.key:
+            if root.right:
+                return self.__delete(root.right, key)
+            else: ## end of search
+                print('@delete failed, no match found!')
                 return False
-        ## case 3: current node matches
+
+    ## is valid bst
+    def is_valid_bst(self):
+        if not self.root:
+            return True
         else:
-            if entry.left and entry.right: ## case 3.1: current node has 2 children
-                ## get the replaced node
-                inorder_successor = entry.right
-                while inorder_successor.left:
-                    inorder_successor = inorder_successor.left
-                ## change entry value
-                entry.val = inorder_successor.val
-                ## continue delete until reach leaf node
-                return self.__delete(inorder_successor, val) 
-                    
-            elif entry.left: ## case 3.2: current node has left child
-                entry.val = entry.left.val
-                entry.left = entry.left.left
-                entry.right = entry.left.right
-                return True
-                
-            elif entry.right: ## case 3.3: current node has right child
-                entry.val = entry.right.val
-                entry.left   = entry.right.left
-                entry.right = entry.right.right
-                return True
-                
-            else: ## case 3.4: current node has 0 child
-                if not entry.parent: ## delete root node
-                    print('@delete at root of single node tree!')
-                    self.root = None
-                elif entry is entry.parent.left: ## entry as left child
-                    entry.parent.left = None
-                else: ## entry as right child
-                    entry.parent.right = None
-                return True
-                    
+            return self.__is_valid_bst(self.root, float('-inf'), float('inf'))
+    def __is_valid_bst(self, root, min, max):
+        if root.key < min or root.key > max:
+            return False
+        else:
+            left_ok = self.__is_valid_bst(root.left, min, root.key) if root.left else True
+            right_ok = self.__is_valid_bst(root.right,  root.key, max) if root.right else True
+            return left_ok and right_ok
