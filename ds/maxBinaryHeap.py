@@ -17,11 +17,13 @@ class maxBinaryHeap(object):
         self.heap.append(key) ## add to end
         self.heapSize += 1 ## increase index
         self.swimUp(self.heapSize)
+        
     def swimUp(self, index):
         father_index = index // 2
         while father_index >= 1:
             if self.heap[father_index] < self.heap[index]: ## when father node key is smaller
                 self.heap[father_index], self.heap[index] = self.heap[index], self.heap[father_index] ## swarp
+                index = father_index
                 father_index = father_index//2
             else:
                 break
