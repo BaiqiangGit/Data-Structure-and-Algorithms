@@ -1,5 +1,5 @@
 # Data Structure and Algorithm
-Data Structure and Algorithm Study Based on Python 3
+Data Structure and Algorithm in Python3
 
 [Jupyter Notebook](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/nb)
 
