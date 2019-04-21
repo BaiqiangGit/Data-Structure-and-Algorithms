@@ -17,5 +17,11 @@ Data Structure and Algorithm Study Based on Python 3
 
 [7. Max Binary Heap](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/maxBinaryHeap.py)
 
+[8. Linear Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/Queue.py)
+
+[9. Double Ended Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/Deque.py)
+
+[10. Circular Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/circularQueue.py)
+
 # Miscellaneous
 [1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/nb/TruthValueTesting.ipynb)
