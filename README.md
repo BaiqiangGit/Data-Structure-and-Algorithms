@@ -42,5 +42,9 @@ Data Structure and Algorithm in Python3
 
 [11. Stack](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/stack.py)
 
+#### Stack
+
+[12. Stack](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/graph.py)
+
 # Miscellaneous
 [1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/nb/TruthValueTesting.ipynb)
