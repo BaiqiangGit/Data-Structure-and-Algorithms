@@ -38,7 +38,7 @@ Data Structure and Algorithm in Python3
 [10. Circular Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/circularQueue.py)
 
 
-#### stack
+#### Stack
 
 [11. Stack](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/stack.py)
 
