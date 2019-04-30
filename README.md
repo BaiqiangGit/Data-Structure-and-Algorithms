@@ -3,9 +3,11 @@
 
 What I cannot create, I do not understand ---- Richard Feynman
 
-What I cannot create fast, I do not master ---- I believe.
+What I cannot create fast, I do not master ---- I believe
 
-Mastering **1** thing is harder than knowing **1000** things.
+Mastering **1** thing is more difficult than knowing **1000** things
+
+When you have spent enough hrs you become master automaticly.
 
 ******************************************************
 
