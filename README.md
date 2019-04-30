@@ -9,6 +9,8 @@ Mastering **1** thing is more difficult than knowing **1000** things
 
 When you have spent enough hrs you become master automaticly.
 
+Top fruits need deep roots. 
+
 ******************************************************
 
 # Data Structure and Algorithm
