@@ -1,3 +1,16 @@
+******************************************************
+******************************************************
+### Prewords
+
+What I cannot create, I do not understand ---- Richard Feynman
+
+What I cannot create fast, I do not master. ---- I believe.
+
+Mastering **1** thing is better than knowing **1000** things.
+
+******************************************************
+******************************************************
+
 # Data Structure and Algorithm
 Data Structure and Algorithm in Python3
 
