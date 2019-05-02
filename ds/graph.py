@@ -3,7 +3,7 @@
 ## Baiqiang XIA implementation of data structures
 
 ## Graph represented as Adjacency List
-class directed_graph(object):
+class directedGraph(object):
     ## init
     def __init__(self):
         self.graph = {} ## adjacency diction
@@ -14,7 +14,7 @@ class directed_graph(object):
         if fromVertex in self.graph:
             self.graph[fromVertex].append(toVertex)
         else:
-            self.graph[fromVertex] = [toVertex]
+            self.graph[fromVertex] = [toVertex] ## initialize as list
             
     ## print
     def __str__(self):
