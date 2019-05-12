@@ -42,18 +42,20 @@ Data Structure and Algorithm in Python3
 
 [8. Linear Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/Queue.py)
 
-[9. Double Ended Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/Deque.py)
+[9. Priority Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/priorityQueue.py)
 
-[10. Circular Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/circularQueue.py)
+[10. Double Ended Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/Deque.py)
+
+[11. Circular Queue](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/circularQueue.py)
 
 
 #### Stack
 
-[11. Stack](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/stack.py)
+[12. Stack](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/stack.py)
 
 #### Graph
 
-[12. Adjacency List](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/graph.py)
+[13. Adjacency List](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/ds/graph.py)
 
 # Miscellaneous
 [1. What are evaluated as False in Python and why ?](https://github.com/BaiqiangGit/Data-Structure-and-Algorithms---Python3/blob/master/nb/TruthValueTesting.ipynb)
