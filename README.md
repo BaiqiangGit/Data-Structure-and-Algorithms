@@ -1,9 +1,17 @@
 ******************************************************
 ### Prewords
 
-What I cannot create, I do not understand ---- Richard Feynman
+What I cannot create, I do not understand - Richard Feynman
 
-What I cannot create fast, I do not really understand. Mastering **1** thing is more difficult than knowing **1000** things. Top fruits need deep roots. Only when enough hours have been paid could you become master. Repeat and repeat, with hand and mind.
+What I cannot create fast, I do not really understand. 
+
+Mastering **1** thing is more difficult than knowing **1000** things. 
+
+Top fruits need deep roots. 
+
+Only when enough hours have been paid could you become master. 
+
+Repeat and repeat, with hand and mind.
 
 ******************************************************
 
